@@ -1,0 +1,120 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.scene() {
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-size: cover;
+    background-position: center 0px;
+    background-repeat: repeat-y;
+    position: relative;
+}
+
+.button() {
+    position: absolute;
+    left: 50%;
+    width: 120px;
+    margin-left: -60px;
+    line-height: 30px;
+    background: #c4c9ca;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 30px;
+    display: block;
+}
+
+.stage {
+    width: 200%;
+    height: 100%;
+    // background: red;
+    transition: all 0.3s;
+    // margin-left: -100%;
+    position: relative;
+
+    .game_start {
+        .scene;
+        background-image: url('../images/background-start.png');
+
+        button.start {
+            width: 120px;
+            background: #c4c9ca;
+            outline: none;
+            border: 1px solid black;
+            border-radius: 30px;
+            line-height: 30px;
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            margin-left: -60px;
+        }
+
+    }
+
+    .game {
+        .scene;
+        background-image: url('../images/background-game.png');
+
+        img {
+            position: absolute;
+        }
+
+        .ranking {
+            width: 60%;
+            margin: 0 auto;
+            background-origin: 1px solid black;
+            // border-radius: 30px;
+            transition: all 0.3s;
+            position: relative;
+            z-index: 9;
+
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                background: #c3c8c9;
+
+                td,
+                th {
+                    border: 1px solid black;
+                    text-align: center;
+                    line-height: 24px;
+                }
+            }
+        }
+
+        .dead {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: -100px;
+            transition: all 0.5s;
+            z-index: 9;
+
+            button {
+                .button;
+                position: static;
+                margin: 10px auto;
+                z-index: 9;
+                background: #c3c8c9;
+            }
+        }
+    }
+
+    .score {
+        width: 50%;
+        position: absolute;
+        margin: 0;
+        top: 0;
+        left: 50%;
+        z-index: 9;
+
+        span {
+            line-height: 30px;
+            margin-left: 10px;
+        }
+    }
+}

@@ -1,0 +1,103 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.stage {
+  width: 200%;
+  height: 100%;
+  transition: all 0.3s;
+  position: relative;
+}
+.stage .game_start {
+  width: 50%;
+  height: 100%;
+  float: left;
+  background-size: cover;
+  background-position: center 0px;
+  background-repeat: repeat-y;
+  position: relative;
+  background-image: url('../images/background-start.png');
+}
+.stage .game_start button.start {
+  width: 120px;
+  background: #c4c9ca;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 30px;
+  line-height: 30px;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  margin-left: -60px;
+}
+.stage .game {
+  width: 50%;
+  height: 100%;
+  float: left;
+  background-size: cover;
+  background-position: center 0px;
+  background-repeat: repeat-y;
+  position: relative;
+  background-image: url('../images/background-game.png');
+}
+.stage .game img {
+  position: absolute;
+}
+.stage .game .ranking {
+  width: 60%;
+  margin: 0 auto;
+  background-origin: 1px solid black;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 9;
+}
+.stage .game .ranking table {
+  border-collapse: collapse;
+  width: 100%;
+  background: #c3c8c9;
+}
+.stage .game .ranking table td,
+.stage .game .ranking table th {
+  border: 1px solid black;
+  text-align: center;
+  line-height: 24px;
+}
+.stage .game .dead {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -100px;
+  transition: all 0.5s;
+  z-index: 9;
+}
+.stage .game .dead button {
+  position: absolute;
+  left: 50%;
+  width: 120px;
+  margin-left: -60px;
+  line-height: 30px;
+  background: #c4c9ca;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 30px;
+  display: block;
+  position: static;
+  margin: 10px auto;
+  z-index: 9;
+  background: #c3c8c9;
+}
+.stage .score {
+  width: 50%;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  left: 50%;
+  z-index: 9;
+}
+.stage .score span {
+  line-height: 30px;
+  margin-left: 10px;
+}
+/*# sourceMappingURL=./style.css.map */

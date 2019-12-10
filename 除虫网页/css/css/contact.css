@@ -1,0 +1,337 @@
+body {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+a {
+  text-decoration: none;
+}
+.header {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+.header .header-top {
+  width: 100%;
+  margin: 0px auto;
+  background: #011a48;
+  text-align: center;
+  padding: 15px 0;
+  overflow: hidden;
+}
+.header .header-top .content {
+  width: 80%;
+  margin: 0px auto;
+  text-align: center;
+  overflow: hidden;
+}
+.header .header-top .content .left {
+  width: 48%;
+  margin: 0px;
+  padding: 0 1%;
+  overflow: hidden;
+  float: left;
+  list-style: none;
+}
+.header .header-top .content .left li {
+  height: 30px;
+  line-height: 30px;
+  float: left;
+  margin-right: 25px;
+  border-right: 1px solid #083281;
+  padding-right: 25px;
+}
+.header .header-top .content .left li a {
+  color: white;
+  text-decoration: none;
+}
+.header .header-top .content .left li a:hover {
+  color: #f7941d;
+  transition: all 0.5s;
+}
+.header .header-top .content .left li i {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  color: white;
+  margin-right: 10px;
+}
+.header .header-top .content .left li:last-child {
+  border: none;
+}
+.header .header-top .content .right {
+  width: 48%;
+  height: 30px;
+  padding: 0 1%;
+  float: right;
+  line-height: 30px;
+}
+.header .header-top .content .right ul {
+  height: 30px;
+  margin: 0px;
+  padding: 0px;
+  line-height: 30px;
+  text-align: right;
+}
+.header .header-top .content .right a {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  line-height: 20px;
+  margin: 7.5px 10px;
+  color: white;
+  transition: all 0.5s;
+}
+.header .header-top .content .right a:hover {
+  color: #f7941d;
+}
+.header .header-top .content .right a i {
+  display: inline-block;
+}
+.header .header-main {
+  width: 100%;
+  margin: 0px auto;
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.2);
+}
+.header .header-main .content {
+  width: 80%;
+  margin: 0px auto;
+  overflow: hidden;
+}
+.header .header-main .content .logo {
+  width: 28%;
+  height: 50px;
+  margin: 15px 0;
+  text-align: left;
+  padding: 0 1%;
+  float: left;
+}
+.header .header-main .content .logo img {
+  display: block;
+}
+.header .header-main .content .right {
+  width: 70%;
+  height: 50px;
+  float: right;
+  padding: 0;
+  margin: 15px 0;
+  line-height: 50px;
+}
+.header .header-main .content .right ul {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-align: right;
+  float: left;
+}
+.header .header-main .content .right ul a {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  line-height: 50px;
+  color: #222222;
+  padding: 0px 15px;
+  transition: all 0.5s;
+}
+.header .header-main .content .right ul a:hover {
+  color: #F7941D;
+}
+.middle {
+  padding: 60px 0;
+}
+.middle .wrap {
+  width: 1200px;
+  margin: 0px auto;
+}
+.middle .wrap::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.middle .wrap .project {
+  width: 600px;
+}
+.middle .wrap .project h3 {
+  color: #222222;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 22px;
+  padding-left: 15px;
+}
+.middle .wrap .project form {
+  width: 100%;
+  font-size: 0;
+}
+.middle .wrap .project form .inputbox {
+  display: inline-block;
+  width: 270px;
+  height: 50px;
+  padding: 0px 15px;
+  margin-bottom: 20px;
+}
+.middle .wrap .project form .inputbox input {
+  width: 250px;
+  padding: 10px;
+  border: none;
+  line-height: 27px;
+  background: #f7f7f7;
+}
+.middle .wrap .project form .col {
+  width: 570px;
+  padding: 0 15px;
+}
+.middle .wrap .project form .col textarea {
+  width: 550px;
+  height: 150px;
+  padding: 10px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  background: #f7f7f7;
+  resize: none;
+  border: none;
+}
+.middle .wrap .project form .col a {
+  display: block;
+  width: 170px;
+  height: 50px;
+  background: #F7941D;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: all 0.5s;
+}
+.middle .wrap .project form .col a:hover {
+  background: #222222;
+}
+.middle .wrap .contact {
+  width: 540px;
+  padding-left: 30px;
+}
+.middle .wrap .contact h3 {
+  color: #222222;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 22px;
+}
+.middle .wrap .contact p {
+  color: #555555;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+.middle .wrap .contact ul li {
+  color: #555555;
+  line-height: 28px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.middle .wrap .contact ul li i {
+  padding-right: 10px;
+}
+.footer {
+  padding: 100px 0px;
+  background: #f3f5f6;
+  text-align: center;
+}
+.footer .wrap {
+  width: 1200px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.footer .wrap .col {
+  width: 270px;
+  margin: 0 15px;
+  float: left;
+  text-align: left;
+}
+.footer .wrap .col h5 {
+  margin-bottom: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #222222;
+}
+.footer .wrap .col p {
+  font-size: 14px;
+  color: #222222;
+  padding-bottom: 15px;
+  line-height: 24px;
+}
+.footer .wrap .col ul li {
+  line-height: 30px;
+  font-size: 14px;
+}
+.footer .wrap .col ul li a {
+  color: #222222;
+  transition: all 0.5s;
+}
+.footer .wrap .col ul li:hover a {
+  display: inline-block;
+  transform: translateX(20px);
+  color: #F7941D;
+}
+.footer .wrap .col:nth-child(3) ul li a {
+  font-size: 13px;
+}
+.footer .wrap .col form {
+  width: 100%;
+  height: 44px;
+  font-size: 0px;
+  margin-bottom: 25px;
+}
+.footer .wrap .col form input {
+  width: 202px;
+  height: 34px;
+  padding: 5px 10px;
+  border: none;
+  background: #e5e5e5;
+  color: #222222;
+}
+.footer .wrap .col form button {
+  width: 48px;
+  height: 44px;
+  display: inline-block;
+  padding: 0 2px;
+  background: #F7941D;
+  color: white;
+  border: none;
+  text-align: center;
+  line-height: 44px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.footer .wrap .col form button:hover {
+  background: #222222;
+}
+.footer .wrap .col form button i {
+  width: 18px;
+  height: 18px;
+}
+.footer .wrap .col .contact a {
+  width: 14px;
+  height: 14px;
+  margin-right: 15px;
+  color: #222222;
+}
+.footer .wrap .col .contact a i {
+  transition: all 0.5s;
+}
+.footer .wrap .col .contact a i:hover {
+  color: #F7941D;
+}
+.footer-button {
+  padding: 15px 0;
+  background: #dadada;
+}
+/*# sourceMappingURL=./contact.css.map */
