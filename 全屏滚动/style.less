@@ -1,0 +1,595 @@
+ul.stage {
+    width: 100%;
+    height: 100vh;
+    background: lightblue;
+    overflow: hidden;
+    position: relative;
+
+    li {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+
+
+        &.first {
+            background-color: #6a3589;
+
+            .left {
+                width: 50%;
+                height: 100%;
+                float: left;
+                padding-top: 10%;
+
+                div.phones {
+                    width: 100%;
+                    height: 100%;
+                    margin: 0;
+                    position: relative;
+                    bottom: -300px;
+                    opacity: 0;
+                    transition: all 3s;
+                    float: left;
+                    text-align: center;
+
+                    img.phone1 {
+                        width: 45%;
+                        height: 100%;
+                    }
+
+                    img.phone2 {
+                        width: 35%;
+                        height: 90%;
+                        margin-left: -150px;
+                    }
+
+                    &.active {
+                        bottom: 0;
+                        opacity: 1;
+                    }
+                }
+
+            }
+
+            .right {
+                width: 50%;
+                height: 100%;
+                float: left;
+
+                .star {
+                    width: 80px;
+                    height: 150px;
+                    opacity: 0;
+                    margin-left: -40px;
+                    transition: all 3s linear;
+
+
+
+                    .vline {
+                        width: 4px;
+                        height: 115px;
+                        background: #efde01;
+                        transition: all 3s;
+                        margin: 0 auto;
+
+                    }
+
+                    img {
+                        width: 80px;
+                        height: 80px;
+                        display: block;
+                        margin-left: 0 auto;
+                        transform: rotateZ(0);
+                        transition: all 3s linear;
+                        margin-top: -40px;
+                    }
+
+
+
+                    &.active {
+                        opacity: 1;
+                    }
+                }
+
+
+
+                div.down {
+                    width: 100%;
+                    height: 450px;
+                    float: left;
+                    opacity: 0;
+                    transition: all 3s;
+
+                    margin: 150px 0 0 0;
+                    position: relative;
+                    bottom: -300px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    &.active {
+                        opacity: 1;
+                        bottom: 0;
+                    }
+                }
+            }
+
+
+        }
+
+        &.second {
+            background-color: #eee;
+
+            .left {
+                width: 60%;
+                height: 100%;
+                float: left;
+
+                .help {
+                    width: 100%;
+                    height: 65%;
+                    padding-top: 15%;
+                    // margin-bottom: 10%;
+
+                    // position: relative;
+
+                    .star2 {
+                        width: 300px;
+                        height: 100px;
+                        display: block;
+                        margin: 0 auto;
+                    }
+
+                    .wrap {
+                        width: 420px;
+                        height: 250px;
+                        margin: 0 auto;
+                        padding-left: 60px;
+
+                        #help {
+                            width: 300px;
+                            height: 250px;
+                            margin-bottom: 23px;
+                        }
+
+                        div.text1 {
+                            width: 120px;
+                            height: 250px;
+                            vertical-align: top;
+
+                            background-image: url('./img/pop2.png');
+                            background-size: 100% 40%;
+                            background-repeat: no-repeat;
+                            background-position-y: 20px;
+                            display: inline-block;
+                            padding-top: -150px;
+                            margin-left: -80px;
+                            padding-top: 20px;
+
+                            img {
+                                width: 100%;
+                                height: 100px;
+                            }
+                        }
+
+                    }
+                }
+
+
+                .comfort {
+                    width: 100%;
+                    height: 35%;
+
+                    div.text {
+                        width: 100%;
+                        height: 50%;
+                        // padding-top: 10%;
+
+                        div.text2 {
+                            width: 20%;
+                            height: 100%;
+                            background-image: url('./img/pop2.png');
+                            background-size: 100% 100%;
+                            background-repeat: no-repeat;
+                            float: left;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+
+                            &:nth-child(1) {
+                                margin-left: 10%;
+                            }
+
+                            &:nth-child(2) {
+                                margin-left: 10%;
+                                // margin-top: 10%;
+                            }
+
+                            &:nth-child(3) {
+                                margin-left: 10%;
+
+                            }
+                        }
+
+
+                    }
+
+                    img.people {
+                        width: 100%;
+                        height: 50%;
+                    }
+                }
+            }
+
+
+
+            .right {
+                width: 40%;
+                height: 100%;
+                float: left;
+
+                .moon {
+                    width: 80px;
+                    height: 240px;
+                    margin: 0 auto;
+
+                    .vline {
+                        width: 2px;
+                        height: 200px;
+                        background: #6a3589;
+                        transition: all 3s;
+                        margin: 0 auto;
+                    }
+
+                    img {
+                        width: 80px;
+                        height: 80px;
+                        margin-right: -40px;
+                        margin-top: -40px;
+                        transition: all 3s linear;
+                    }
+
+
+                }
+
+
+
+                .content {
+                    width: 250px;
+                    height: 250px;
+                    font-size: 24px;
+                    // position: absolute;
+                    // right: 300px;
+                    // top: 200px;
+
+                    h2 {
+                        font-size: 28px;
+                        font-weight: bold;
+                        color: #6a3589;
+                    }
+
+                }
+
+            }
+
+
+        }
+
+        &.third {
+            background-color: #f4e6ff;
+
+            // position: relative;
+            .left {
+                width: 45%;
+                height: 100%;
+                float: left;
+
+                .smile {
+                    width: 80px;
+                    height: 215px;
+                    margin: 0 auto;
+                    margin-bottom: 50px;
+
+                    .vline {
+                        width: 2px;
+                        height: 135px;
+                        background: #6a3589;
+                        margin-left: -1px;
+                        transition: all 3s;
+                    }
+
+                    div.images {
+                        width: 80px;
+                        height: 80px;
+                        position: relative;
+                        display: block;
+                        margin-left: -40px;
+                        transition: all 3s linear;
+
+                        :hover {
+                            transition: none;
+                        }
+
+                        &.active {
+                            opacity: 1;
+                        }
+
+                        img {
+                            width: 80px;
+                            height: 80px;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                    }
+                }
+
+                .content {
+                    width: 100%;
+                    height: 300px;
+                    // background: red;
+                    font-size: 24px;
+                    // position: absolute;
+                    // left: 400px;
+                    // top: 200px;
+                    text-align: right;
+
+                    h2 {
+                        font-size: 28px;
+                        font-weight: bold;
+                        color: #6a3589;
+                        margin-bottom: 20px;
+                    }
+
+                }
+
+
+            }
+
+            .right {
+                width: 45%;
+                height: 100%;
+                float: left;
+                padding-top: 100px;
+
+                .talk {
+                    width: 90%;
+                    height: 80%;
+                    background-image: url('./img/hearttalk.png');
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    text-align: right;
+                    padding-top: 80px;
+                    // padding-left: 20px;
+
+
+                    img {
+                        width: 150px;
+                        height: 150px;
+                        display: inline-block;
+                        // padding-top: 30px;
+                        margin-right: 50px;
+                    }
+                }
+            }
+
+
+        }
+
+
+        &.fourth {
+            background-color: #eee;
+
+            .left {
+                width: 60%;
+                height: 100%;
+                float: left;
+                // background: lightcoral;
+                padding-top: 180px;
+
+                .connection {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+
+                    .f1b {
+                        width: 50%;
+                        height: 100%;
+                        margin: 0 auto;
+                        background-image: url('./img/f1.png');
+                        background-repeat: no-repeat;
+                        background-size: 100% 100%;
+                        position: relative;
+                        z-index: 3;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    .f2b {
+                        width: 130px;
+                        height: 100%;
+                        // background: red;
+                        float: left;
+                        overflow: hidden;
+                        position: absolute;
+                        top: 20%;
+                        right: 50%;
+
+                        .wrap {
+                            width: 260px;
+                            height: 55%;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+
+                    .f3b {
+                        width: 130px;
+                        height: 100%;
+                        // background: red;
+                        float: left;
+                        overflow: hidden;
+                        position: absolute;
+                        top: 20%;
+                        left: 50%;
+
+                        .wrap {
+                            width: 260px;
+                            height: 55%;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+
+                            // margin-right: 0;
+                            // margin-left: -100%;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+
+                            }
+                        }
+
+
+                    }
+
+                    .bg {
+                        width: 100%;
+                        height: 50%;
+                        margin-top: -25%;
+                        position: relative;
+
+                        img {
+                            width: 100%;
+                            height: 80%;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                    }
+                }
+
+
+            }
+
+
+            .right {
+                width: 40%;
+                height: 100%;
+                float: left;
+                // background: lightgreen;
+
+                .loc {
+                    width: 80px;
+                    height: 195px;
+                    margin-left: 50px;
+                    // transition: all 3s linear;
+                    margin-bottom: 50px;
+
+
+
+                    .vline {
+                        width: 2px;
+                        height: 115px;
+                        background: #6a3589;
+                        transition: all 3s;
+                        margin: 0 auto;
+
+                    }
+
+                    img {
+                        width: 80px;
+                        height: 80px;
+                        display: block;
+                    }
+                }
+
+                .content {
+                    width: 300px;
+                    height: 250px;
+                    font-size: 24px;
+
+                    h2 {
+                        font-size: 28px;
+                        font-weight: bold;
+                        margin-bottom: 30px;
+                        color: #6a3589;
+                    }
+                }
+            }
+        }
+
+        &.fifth {
+            background-color: #1c1a36;
+            padding-top: 100px;
+
+            .cloud {
+                width: 500px;
+                height: 500px;
+                margin: 0 auto;
+                background-image: url('./img/house.png');
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                text-align: right;
+                padding-top: 80px;
+                position: relative;
+                left: 0;
+
+                img {
+                    &:nth-child(1) {
+                        width: 80px;
+                        height: 70px;
+                        // padding-top: 50px;
+                        margin-right: 180px;
+                        transform: rotateZ(36deg);
+                        position: relative;
+                    }
+
+                    &:nth-child(2) {
+                        width: 500px;
+                        height: 500px;
+                        // padding-top: 50px;
+                        margin-right: 180px;
+                        // transform: rotateZ(36deg);
+                        margin-top: -160px;
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .pagenation {
+        width: 20px;
+        height: 150px;
+        /* background: rgba(0, 0, 0, 0.7); */
+        position: fixed;
+        right: 20px;
+        top: 50%;
+        margin-top: -75px;
+        text-align: center;
+
+        span {
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 2px solid #cebed7;
+            border-radius: 50%;
+            margin: 5px auto;
+            display: block;
+            transition: all 0.5s;
+
+            &.active {
+                background: #b499c3;
+            }
+        }
+    }
+}

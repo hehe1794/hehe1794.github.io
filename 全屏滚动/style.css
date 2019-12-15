@@ -1,0 +1,447 @@
+ul.stage {
+  width: 100%;
+  height: 100vh;
+  background: lightblue;
+  overflow: hidden;
+  position: relative;
+}
+ul.stage li {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+ul.stage li.first {
+  background-color: #6a3589;
+}
+ul.stage li.first .left {
+  width: 50%;
+  height: 100%;
+  float: left;
+  padding-top: 10%;
+}
+ul.stage li.first .left div.phones {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: relative;
+  bottom: -300px;
+  opacity: 0;
+  transition: all 3s;
+  float: left;
+  text-align: center;
+}
+ul.stage li.first .left div.phones img.phone1 {
+  width: 45%;
+  height: 100%;
+}
+ul.stage li.first .left div.phones img.phone2 {
+  width: 35%;
+  height: 90%;
+  margin-left: -150px;
+}
+ul.stage li.first .left div.phones.active {
+  bottom: 0;
+  opacity: 1;
+}
+ul.stage li.first .right {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+ul.stage li.first .right .star {
+  width: 80px;
+  height: 150px;
+  opacity: 0;
+  margin-left: -40px;
+  transition: all 3s linear;
+}
+ul.stage li.first .right .star .vline {
+  width: 4px;
+  height: 115px;
+  background: #efde01;
+  transition: all 3s;
+  margin: 0 auto;
+}
+ul.stage li.first .right .star img {
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin-left: 0 auto;
+  transform: rotateZ(0);
+  transition: all 3s linear;
+  margin-top: -40px;
+}
+ul.stage li.first .right .star.active {
+  opacity: 1;
+}
+ul.stage li.first .right div.down {
+  width: 100%;
+  height: 450px;
+  float: left;
+  opacity: 0;
+  transition: all 3s;
+  margin: 150px 0 0 0;
+  position: relative;
+  bottom: -300px;
+}
+ul.stage li.first .right div.down img {
+  width: 100%;
+  height: 100%;
+}
+ul.stage li.first .right div.down.active {
+  opacity: 1;
+  bottom: 0;
+}
+ul.stage li.second {
+  background-color: #eee;
+}
+ul.stage li.second .left {
+  width: 60%;
+  height: 100%;
+  float: left;
+}
+ul.stage li.second .left .help {
+  width: 100%;
+  height: 65%;
+  padding-top: 15%;
+}
+ul.stage li.second .left .help .star2 {
+  width: 300px;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+}
+ul.stage li.second .left .help .wrap {
+  width: 420px;
+  height: 250px;
+  margin: 0 auto;
+  padding-left: 60px;
+}
+ul.stage li.second .left .help .wrap #help {
+  width: 300px;
+  height: 250px;
+  margin-bottom: 23px;
+}
+ul.stage li.second .left .help .wrap div.text1 {
+  width: 120px;
+  height: 250px;
+  vertical-align: top;
+  background-image: url('img/pop2.png');
+  background-size: 100% 40%;
+  background-repeat: no-repeat;
+  background-position-y: 20px;
+  display: inline-block;
+  padding-top: -150px;
+  margin-left: -80px;
+  padding-top: 20px;
+}
+ul.stage li.second .left .help .wrap div.text1 img {
+  width: 100%;
+  height: 100px;
+}
+ul.stage li.second .left .comfort {
+  width: 100%;
+  height: 35%;
+}
+ul.stage li.second .left .comfort div.text {
+  width: 100%;
+  height: 50%;
+}
+ul.stage li.second .left .comfort div.text div.text2 {
+  width: 20%;
+  height: 100%;
+  background-image: url('img/pop2.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  float: left;
+}
+ul.stage li.second .left .comfort div.text div.text2 img {
+  width: 100%;
+  height: 100%;
+}
+ul.stage li.second .left .comfort div.text div.text2:nth-child(1) {
+  margin-left: 10%;
+}
+ul.stage li.second .left .comfort div.text div.text2:nth-child(2) {
+  margin-left: 10%;
+}
+ul.stage li.second .left .comfort div.text div.text2:nth-child(3) {
+  margin-left: 10%;
+}
+ul.stage li.second .left .comfort img.people {
+  width: 100%;
+  height: 50%;
+}
+ul.stage li.second .right {
+  width: 40%;
+  height: 100%;
+  float: left;
+}
+ul.stage li.second .right .moon {
+  width: 80px;
+  height: 240px;
+  margin: 0 auto;
+}
+ul.stage li.second .right .moon .vline {
+  width: 2px;
+  height: 200px;
+  background: #6a3589;
+  transition: all 3s;
+  margin: 0 auto;
+}
+ul.stage li.second .right .moon img {
+  width: 80px;
+  height: 80px;
+  margin-right: -40px;
+  margin-top: -40px;
+  transition: all 3s linear;
+}
+ul.stage li.second .right .content {
+  width: 250px;
+  height: 250px;
+  font-size: 24px;
+}
+ul.stage li.second .right .content h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #6a3589;
+}
+ul.stage li.third {
+  background-color: #f4e6ff;
+}
+ul.stage li.third .left {
+  width: 45%;
+  height: 100%;
+  float: left;
+}
+ul.stage li.third .left .smile {
+  width: 80px;
+  height: 215px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+ul.stage li.third .left .smile .vline {
+  width: 2px;
+  height: 135px;
+  background: #6a3589;
+  margin-left: -1px;
+  transition: all 3s;
+}
+ul.stage li.third .left .smile div.images {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  display: block;
+  margin-left: -40px;
+  transition: all 3s linear;
+}
+ul.stage li.third .left .smile div.images :hover {
+  transition: none;
+}
+ul.stage li.third .left .smile div.images.active {
+  opacity: 1;
+}
+ul.stage li.third .left .smile div.images img {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+ul.stage li.third .left .content {
+  width: 100%;
+  height: 300px;
+  font-size: 24px;
+  text-align: right;
+}
+ul.stage li.third .left .content h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #6a3589;
+  margin-bottom: 20px;
+}
+ul.stage li.third .right {
+  width: 45%;
+  height: 100%;
+  float: left;
+  padding-top: 100px;
+}
+ul.stage li.third .right .talk {
+  width: 90%;
+  height: 80%;
+  background-image: url('img/hearttalk.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  text-align: right;
+  padding-top: 80px;
+}
+ul.stage li.third .right .talk img {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  margin-right: 50px;
+}
+ul.stage li.fourth {
+  background-color: #eee;
+}
+ul.stage li.fourth .left {
+  width: 60%;
+  height: 100%;
+  float: left;
+  padding-top: 180px;
+}
+ul.stage li.fourth .left .connection {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+ul.stage li.fourth .left .connection .f1b {
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+  background-image: url('img/f1.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  z-index: 3;
+  top: 0;
+  left: 0;
+}
+ul.stage li.fourth .left .connection .f2b {
+  width: 130px;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: absolute;
+  top: 20%;
+  right: 50%;
+}
+ul.stage li.fourth .left .connection .f2b .wrap {
+  width: 260px;
+  height: 55%;
+}
+ul.stage li.fourth .left .connection .f2b .wrap img {
+  width: 100%;
+  height: 100%;
+}
+ul.stage li.fourth .left .connection .f3b {
+  width: 130px;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+}
+ul.stage li.fourth .left .connection .f3b .wrap {
+  width: 260px;
+  height: 55%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+ul.stage li.fourth .left .connection .f3b .wrap img {
+  width: 100%;
+  height: 100%;
+}
+ul.stage li.fourth .left .connection .bg {
+  width: 100%;
+  height: 50%;
+  margin-top: -25%;
+  position: relative;
+}
+ul.stage li.fourth .left .connection .bg img {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+ul.stage li.fourth .right {
+  width: 40%;
+  height: 100%;
+  float: left;
+}
+ul.stage li.fourth .right .loc {
+  width: 80px;
+  height: 195px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+ul.stage li.fourth .right .loc .vline {
+  width: 2px;
+  height: 115px;
+  background: #6a3589;
+  transition: all 3s;
+  margin: 0 auto;
+}
+ul.stage li.fourth .right .loc img {
+  width: 80px;
+  height: 80px;
+  display: block;
+}
+ul.stage li.fourth .right .content {
+  width: 300px;
+  height: 250px;
+  font-size: 24px;
+}
+ul.stage li.fourth .right .content h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #6a3589;
+}
+ul.stage li.fifth {
+  background-color: #1c1a36;
+  padding-top: 100px;
+}
+ul.stage li.fifth .cloud {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  background-image: url('img/house.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-align: right;
+  padding-top: 80px;
+  position: relative;
+  left: 0;
+}
+ul.stage li.fifth .cloud img:nth-child(1) {
+  width: 80px;
+  height: 70px;
+  margin-right: 180px;
+  transform: rotateZ(36deg);
+  position: relative;
+}
+ul.stage li.fifth .cloud img:nth-child(2) {
+  width: 500px;
+  height: 500px;
+  margin-right: 180px;
+  margin-top: -160px;
+  position: relative;
+}
+ul.stage .pagenation {
+  width: 20px;
+  height: 150px;
+  /* background: rgba(0, 0, 0, 0.7); */
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  margin-top: -75px;
+  text-align: center;
+}
+ul.stage .pagenation span {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 2px solid #cebed7;
+  border-radius: 50%;
+  margin: 5px auto;
+  display: block;
+  transition: all 0.5s;
+}
+ul.stage .pagenation span.active {
+  background: #b499c3;
+}
+/*# sourceMappingURL=./style.css.map */
