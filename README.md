@@ -37,7 +37,7 @@ HTML5: Canvas、localStorage
 
 javascript: 面向对象，JSON数据
 
-[音乐播放器简易版]()
+[音乐播放器简易版](https://hehe1794.github.io/music/)
 
 #### 4.CSS3
 
