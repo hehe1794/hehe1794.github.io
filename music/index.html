@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./reset.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            background: #383b44;
+            display: flex;
+            flex-direction: column;
+            /* text-align: center; */
+            justify-content: center;
+        }
+
+        .audioPlayer {
+            width: 350px;
+            /* height: 520px; */
+            background: lightblue;
+            margin: 0 auto;
+        }
+
+        .audioPlayer .ui {
+            width: 100%;
+            height: 230px;
+            position: relative;
+            padding-top: 80px;
+            background: url('./images/01.jpg');
+            background-size: cover;
+            background-position: center center;
+            box-sizing: border-box;
+            transition: all 0.5s;
+        }
+
+        .audioPlayer .ui .status_bar {
+            width: 290px;
+            height: 110px;
+            margin: 0 auto;
+            color: white;
+        }
+
+        .audioPlayer .ui .status_bar .details span {
+            font-size: 16px;
+            line-height: 24px;
+            text-shadow: 0 1px 1px #000;
+        }
+
+        .audioPlayer .ui .status_bar .details .name {
+            font-weight: 700;
+
+        }
+
+        .audioPlayer .ui .status_bar .details .artist {
+            font-weight: 300;
+        }
+
+        .audioPlayer .ui .status_bar .progress_bar .wrap {
+            margin: 15px 0;
+            width: 100%;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .audioPlayer .ui .status_bar .progress_bar .wrap .played {
+            width: 0;
+            height: 100%;
+            background: #f66;
+            border-radius: 10px;
+            position: relative;
+            /* transition: all linear 0.1s; */
+        }
+
+        .audioPlayer .ui .status_bar .progress_bar .wrap .played span {
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            border-radius: 50%;
+            top: 0;
+            right: 0;
+            background: white;
+        }
+
+        .audioPlayer .ui .status_bar .progress_bar .wrap input {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: -8px;
+            margin: 0;
+            opacity: 0;
+        }
+
+        .audioPlayer .ui .status_bar .volume_bar {
+            width: 100%;
+            height: 16px;
+            margin-bottom: 10px;
+
+        }
+
+        .audioPlayer .ui .status_bar .volume_bar .sign {
+            width: 16px;
+            height: 16px;
+            /* margin: 2px 0; */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .audioPlayer .ui .status_bar .volume_bar .sign i {
+            width: 16px;
+            height: 16px;
+        }
+
+        .audioPlayer .ui .status_bar .volume_bar .wrap {
+            margin: 5px 0;
+            width: 30%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .audioPlayer .ui .status_bar .volume_bar .wrap .played {
+            width: 50%;
+            height: 100%;
+            background: #f66;
+            border-radius: 10px;
+            position: relative;
+            /* transition: all linear 1s; */
+        }
+
+        .audioPlayer .ui .status_bar .volume_bar .wrap .played span {
+            width: 6px;
+            height: 6px;
+            position: absolute;
+            border-radius: 50%;
+            top: 0;
+            right: 0;
+            background: white;
+        }
+
+        .audioPlayer .ui .status_bar .volume_bar .wrap input {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0;
+            opacity: 0;
+        }
+
+        .audioPlayer .ui .status_bar .time {
+            width: 100%;
+            height: 20px;
+        }
+
+        .audioPlayer .ui .status_bar .time span {
+            font-size: 13px;
+            font-weight: 300;
+            text-shadow: 0 1px 1px #000;
+        }
+
+        .audioPlayer .ui .status_bar .time .elapsed {
+            float: left;
+        }
+
+        .audioPlayer .ui .status_bar .time .total {
+            float: right;
+        }
+
+        .audioPlayer .playList {
+            width: 100%;
+            background: white;
+        }
+
+        .audioPlayer .playList .item {
+            width: 100%;
+            height: 72px;
+            margin: 0 auto;
+            color: black;
+            padding-top: 20px;
+            box-sizing: border-box;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+
+        .audioPlayer .playList .item.active {
+            background: #f66;
+        }
+
+        .audioPlayer .playList .item .wrap {
+            width: 290px;
+            height: 72px;
+            margin: 0 auto;
+        }
+
+
+        .audioPlayer .playList .item .wrap img {
+            width: 34px;
+            height: 34px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        .audioPlayer .playList .item .wrap .content {
+            width: 240px;
+            display: inline-block;
+        }
+
+        .audioPlayer .playList .item .wrap .content h4 {
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: 200;
+        }
+
+        .audioPlayer .playList .item .wrap .content p {
+            font-size: 12px;
+            color: #888888;
+            line-height: 1;
+            font-weight: 200;
+        }
+
+        .audioPlayer .controls {
+            width: 100%;
+            height: 70px;
+            background: rgb(236, 236, 236);
+        }
+
+        .audioPlayer .controls div {
+            width: 33.333%;
+            height: 100%;
+            float: left;
+            text-align: center;
+            line-height: 70px;
+        }
+
+        .audioPlayer .controls div i {
+            color: rgb(162, 162, 162);
+            transition: all 0.5s;
+        }
+
+        .audioPlayer .controls div i:hover {
+            color: #f66;
+            cursor: pointer;
+        }
+
+        .audioPlayer .controls div.center .wrap {
+            /* display: none; */
+            width: 15px;
+            height: 100%;
+            margin: 0 50px;
+            position: relative;
+        }
+
+        .audioPlayer .controls div.center .wrap i {
+            width: 15px;
+            height: 16px;
+            position: absolute;
+            top: 27px;
+            left: 0;
+        }
+
+        .audioPlayer .controls div.center .wrap i:nth-child(2) {
+            display: none;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="audioPlayer">
+        <div class="music">
+            <audio src=""></audio>
+        </div>
+        <div class="ui">
+            <div class="status_bar">
+                <div class="details">
+                    <span class="name">Dusk</span><br>
+                    <span class="artist">Tobu & Syndec</span>
+                </div>
+                <div class="progress_bar">
+                    <div class="wrap">
+                        <div class="played">
+                            <span></span>
+                        </div>
+                        <input type="range" min="0" max="1000" value="0" step="1">
+                    </div>
+                </div>
+                <div class="volume_bar">
+                    <div class="sign"><i class="fa fa-volume-up"></i></div>
+                    <div class="wrap">
+                        <div class="played">
+                            <span></span>
+                        </div>
+                        <input type="range" min="0" max="10" value="5" step="1">
+                    </div>
+                </div>
+                <div class="time">
+                    <span class="elapsed">00:30</span>
+                    <span class="total">00:50</span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="playList">
+            <div class="item item1 active">
+                <div class="wrap">
+                    <img src="./images/01.jpg" alt="">
+                    <div class="content">
+                        <h4>Dusk</h4>
+                        <p>Tobu & Syndec</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item item2">
+                <div class="wrap">
+                    <img src="./images/02.jpg" alt="">
+                    <div class="content">
+                        <h4>Blank</h4>
+                        <p>Disfigure</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item item3">
+                <div class="wrap">
+                    <img src="./images/03.jpg" alt="">
+                    <div class="content">
+                        <h4>Fade</h4>
+                        <p>Alan Walker</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="left">
+                <i class="fa fa-backward prev"></i>
+            </div>
+            <div class="center">
+                <div class="wrap">
+                    <i class="fa fa-pause pause"></i>
+                    <i class="fa fa-play play"></i>
+                </div>
+
+            </div>
+            <div class="right">
+                <i class="fa fa-forward next"></i>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
