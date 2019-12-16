@@ -38,7 +38,7 @@
 
 ## 4.CSS3
 
-- ### [loading]([https://hehe1794.github.io/%E5%8A%A0%E8%BD%BD%E6%95%88%E6%9E%9C/](https://hehe1794.github.io/加载效果/))
+- ### [loading]([https://hehe1794.github.io/加载效果/))
 
   使用技术：
 
@@ -46,7 +46,7 @@
 
 ## 5.jQuery
 
-- ### [全屏滚动]([https://hehe1794.github.io/%E5%85%A8%E5%B1%8F%E6%BB%9A%E5%8A%A8/](https://hehe1794.github.io/全屏滚动/))
+- ### [全屏滚动](https://hehe1794.github.io/全屏滚动/)
 
   使用技术：
 
@@ -54,7 +54,7 @@
 
 ## 6.Bootstrap
 
-- ### [简约商务网站]([https://hehe1794.github.io/%E7%AE%80%E7%BA%A6%E5%95%86%E5%8A%A1%E7%BD%91%E7%AB%99/](https://hehe1794.github.io/简约商务网站/))
+- ### [简约商务网站]([https://hehe1794.github.io/简约商务网站/))
 
   使用技术：
 
