@@ -30,7 +30,8 @@ var musics = {
 
 
 // 播放音乐
-function playMusic(element) {
+
+var playMusic = element => {
 
     // 给audio添加路径
     $('.audioPlayer .music audio').attr('src', element.file);
@@ -44,10 +45,12 @@ function playMusic(element) {
     $('.audioPlayer .controls div .wrap i.pause').css('display', 'none');
 }
 
+// function playMusic(element) 
+
 
 
 // 修改播放信息
-function changeInformation(element) {
+var changeInformation = element => {
 
     setTimeout(function () {
 
@@ -104,36 +107,37 @@ function changeInformation(element) {
 
 
 
-function prevAudio() {
+var prevAudio = () => {
     // 播放上一首歌曲
     current--
     current = current < 0 ? 2 : current
     playMusic(musics.playlist[current])
 }
 
-function nextAudio() {
+
+var nextAudio = () => {
     // 播放下一首歌曲
     current++
     current = current > 2 ? 0 : current
     playMusic(musics.playlist[current])
 }
 
-function pausedAudio() {
+var pausedAudio = () => {
     // 暂停播放歌曲
     $('.audioPlayer .music audio')[0].pause()
     $('.audioPlayer .controls div .wrap i.pause').css('display', 'none');
     $('.audioPlayer .controls div .wrap i.play').css('display', 'block');
 }
 
-function playAudio() {
+
+var playAudio = () => {
     // 开始播放歌曲
     $('.audioPlayer .music audio')[0].play()
     $('.audioPlayer .controls div .wrap i.play').css('display', 'none');
     $('.audioPlayer .controls div .wrap i.pause').css('display', 'block');
 }
 
-
-function init() {
+var init = () => {
     // 初始化
     playMusic(musics.playlist[0])
     changeInformation(musics.playlist[0])
@@ -150,14 +154,14 @@ function init() {
 init()
 
 // 点击播放上一首歌曲
-$('.audioPlayer .controls div i.prev').click(function (e) {
+$('.audioPlayer .controls div i.prev').click((e) => {
 
     e.preventDefault();
     prevAudio()
 });
 
 // 点击播放下一首歌曲
-$('.audioPlayer .controls div i.next').click(function (e) {
+$('.audioPlayer .controls div i.next').click((e) => {
 
     e.preventDefault();
     nextAudio()
@@ -165,13 +169,13 @@ $('.audioPlayer .controls div i.next').click(function (e) {
 
 
 // 点击暂停播放歌曲
-$('.audioPlayer .controls div i.pause').click(function (e) {
+$('.audioPlayer .controls div i.pause').click((e) => {
     e.preventDefault();
     pausedAudio()
 });
 
 // 点击开始/继续播放歌曲
-$('.audioPlayer .controls div i.play').click(function (e) {
+$('.audioPlayer .controls div i.play').click((e) => {
 
     e.preventDefault();
     playAudio()
@@ -179,7 +183,7 @@ $('.audioPlayer .controls div i.play').click(function (e) {
 
 
 // 点击歌曲菜单，播放对应歌曲
-$('.audioPlayer .playList .item').click(function (e) {
+$('.audioPlayer .playList .item').click((e) => {
     e.preventDefault();
     current = $(this).index()
     playMusic(musics.playlist[current])
@@ -187,7 +191,7 @@ $('.audioPlayer .playList .item').click(function (e) {
 
 
 // 歌曲进度条跟随input range的value移动
-$('.progress_bar input').on('input propertychange', function () {
+$('.progress_bar input').on('input propertychange',() => {
 
     $('.progress_bar .played').css('width', this.value / 10 + '%');
     $('.audioPlayer .music audio')[0].currentTime = this.value / 1000 * $('.audioPlayer .music audio')[0].duration
@@ -195,7 +199,7 @@ $('.progress_bar input').on('input propertychange', function () {
 
 
 // 音量进度条跟随input range的value移动
-$('.volume_bar input').on('input propertychange', function () {
+$('.volume_bar input').on('input propertychange', () => {
 
     $('.volume_bar .played').css('width', this.value * 10 + '%');
     document.querySelector('.audioPlayer .music audio').volume = this.value / 10
@@ -204,8 +208,7 @@ $('.volume_bar input').on('input propertychange', function () {
 
 
 // 当当前歌曲播放完毕时，自动播放下一首歌曲
-document.querySelector('.audioPlayer .music audio').onended = function () {
-    console.log('xxx');
+document.querySelector('.audioPlayer .music audio').onended = () => {
     nextAudio()
 }
 

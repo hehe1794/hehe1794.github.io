@@ -30,15 +30,31 @@
 
   javascript: 面向对象，JSON数据
 
+  ES6：箭头函数、Class类
+
 - ### [音乐播放器简易版](https://hehe1794.github.io/music/)
 
   使用技术：
 
   html + css +jQuery
+  
+  ES6：箭头函数
 
 ## 4.CSS3
 
-- ### [loading]([https://hehe1794.github.io/加载效果/))
+- ### [loading](https://hehe1794.github.io/加载效果/)
+
+  使用技术：
+
+  html + css + css3
+
+- ### [3D视差](https://hehe1794.github.io/3D视差效果/)
+
+  使用技术：
+
+  html + css + css3 +javascript
+
+- ### [css3效果](https://hehe1794.github.io/css3效果/)
 
   使用技术：
 
@@ -54,7 +70,15 @@
 
 ## 6.Bootstrap
 
-- ### [简约商务网站]([https://hehe1794.github.io/简约商务网站/))
+- ### [简约商务网站](https://hehe1794.github.io/简约商务网页/)
+
+  使用技术：
+
+  html+css+javascript
+
+  框架：bootstrap
+  
+- ### [植物网页](https://hehe1794.github.io/植物网页/)
 
   使用技术：
 

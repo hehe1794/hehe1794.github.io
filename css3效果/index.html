@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+
+        <title>Document</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                /* background: lightblue; */
+            }
+            .stage1 .box {
+                width: 230px;
+                height: 230px;
+                margin: 20px 0;
+                border-radius: 50%;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                /* display: inline-block; */
+                /* margin: 0 auto; */
+            }
+
+            .box .spinner {
+                width: 230px;
+                height: 230px;
+                border: 15px solid rgba(255, 255, 255, 0.5);
+                border-radius: 50%;
+                transition: all 0.5s;
+                perspective: 500px;
+            }
+
+            .box .img {
+                width: 230px;
+                height: 230px;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                /* background: url('./image/2.jpg'); */
+                background-size: cover;
+                background-repeat: no-repeat;
+                border-radius: 50%;
+                transition: all 0.5s;
+                z-index: -1;
+                perspective: 500px;
+            }
+
+            .box .wrap {
+                width: 230px;
+                height: 230px;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                border-radius: 50%;
+                background-color: rgba(0, 0, 0, 0.5);
+                text-align: center;
+                color: white;
+                transition: all 0.5s;
+                perspective: 500px;
+            }
+
+            .box .wrap .content {
+                width: 140px;
+                height: 140px;
+                margin: 30px auto;
+            }
+
+            .box .wrap .content h3 {
+                font-size: 22px;
+                margin-top: 60px;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+                font-family: "Lustria", Georgia, "Times New Roman", Times, serif;
+                font-weight: 500;
+                text-shadow: 0 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.3);
+            }
+
+            .box .wrap .content p {
+                padding-top: 10px;
+                font-size: 12px;
+                font-style: italic;
+                color: #bbb;
+                border-top: 1px solid #bbb;
+            }
+
+            /* ---------------------------------------------------------------------------------- */
+
+            .box.first .spinner {
+                width: 210px;
+                height: 210px;
+                border-left: 10px solid #ecab18;
+                border-top: 10px solid #ecab18;
+                border-right: 10px solid #1ad280;
+                border-bottom: 10px solid #1ad280;
+                transition: all 1s;
+            }
+
+            .box.first .img {
+                width: 210px;
+                height: 210px;
+                /* top: 10px;
+            left: 10px; */
+                transition: all 1s;
+                background: url("./image/1.jpg");
+            }
+
+            .box.first .wrap {
+                width: 210px;
+                height: 210px;
+                /* top: 10px;
+            left: 10px; */
+                opacity: 0;
+                transition: all 1s;
+            }
+
+            .box.first .wrap .content {
+                width: 140px;
+                height: 140px;
+                margin: 30px auto;
+            }
+
+            .box.first .wrap .content h3 {
+                font-size: 22px;
+                margin-top: 50px;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+                font-family: "Lustria", Georgia, "Times New Roman", Times, serif;
+                font-weight: 500;
+                text-shadow: 0 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.3);
+            }
+
+            .box.first .wrap .content p {
+                padding-top: 10px;
+                font-size: 12px;
+                font-style: italic;
+                color: #bbb;
+                border-top: 1px solid #bbb;
+            }
+
+            .box.first:hover .spinner {
+                transform: rotate(180deg);
+            }
+
+            .box.first:hover .wrap {
+                opacity: 1;
+            }
+
+            /* ---------------------------------------------------------------------------------- */
+
+            .box.second .wrap {
+                z-index: 9;
+                visibility: hidden;
+                transform: translateX(-230px);
+            }
+
+            .box.second .img {
+                transition: all 0.5s;
+                background: url("./image/2.jpg");
+            }
+
+            .second:hover .img {
+                transform: rotate(-90deg);
+            }
+
+            .second:hover .wrap {
+                transform: translateX(0);
+                visibility: visible;
+            }
+
+            /* ---------------------------------------------------------------------------------- */
+
+            .box.third .wrap {
+                transform: translateX(230px);
+                visibility: hidden;
+            }
+
+            .box.third .img {
+                background: url("./image/3.jpg");
+            }
+
+            .third:hover .wrap {
+                transform: translateX(0);
+                visibility: visible;
+            }
+
+            .third:hover .img {
+                opacity: 0;
+                transform: translate(-230px);
+            }
+
+            .third:hover .spinner {
+                opacity: 0;
+
+                transform: translate(-230px);
+            }
+
+            /* ---------------------------------------------------------------------------------- */
+
+            .box.fourth .wrap {
+                transform: translateX(230px);
+                z-index: -2;
+                visibility: hidden;
+            }
+            .box.fourth .img {
+                background: url("./image/4.jpg");
+            }
+
+            .fourth:hover .img {
+                transform: scale(0.5) translate(-230px);
+            }
+
+            .fourth:hover .spinner {
+                transform: scale(0.5) translate(-230px);
+            }
+
+            .fourth:hover .wrap {
+                transform: translate(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            /* ---------------------------------------------------------------------------------- */
+
+            .box.fifth .wrap {
+                z-index: -2;
+                transform: scale(0);
+            }
+
+            .box.fifth .img {
+                background: url("./image/5.jpg");
+            }
+
+            .fifth:hover .spinner {
+                transform: scale(1.2);
+                opacity: 0;
+            }
+
+            .fifth:hover .img {
+                transform: scale(1.2);
+                opacity: 0;
+            }
+
+            .fifth:hover .wrap {
+                transform: scale(1);
+            }
+
+            /* ---------------------------------------------------------------------------------- */
+
+            .box.sixth .wrap {
+                z-index: -2;
+                transform: scale(0);
+            }
+
+            .box.sixth .img {
+                background: url("./image/6.jpg");
+            }
+            .sixth:hover .spinner {
+                transform: translateX(-230px) rotate(-360deg);
+                opacity: 0;
+            }
+
+            .sixth:hover .img {
+                transform: translateX(-230px) rotate(-360deg);
+                opacity: 0;
+            }
+
+            .sixth:hover .wrap {
+                transform: scale(1);
+            }
+
+            /* ---------------------------------------------------------------------------------- */
+            /* .box.seventh .img{
+            transition: all 1s;
+        }
+
+        .box.seventh .spinner{
+            transition: all 1s;
+        } */
+
+            .box.seventh .wrap {
+                z-index: -2;
+                transform: scale(0);
+                /* transition: all 1s;  */
+                transition-delay: 0.5s;
+                opacity: 0;
+            }
+            .box.seventh .img {
+                background: url("./image/7.jpg");
+            }
+
+            .seventh:hover .spinner {
+                transform: scale(0) rotateY(-180deg);
+                opacity: 0;
+            }
+
+            .seventh:hover .img {
+                transform: scale(0) rotateY(-180deg);
+                opacity: 0;
+            }
+
+            .seventh:hover .wrap {
+                transform: scale(1) rotateY(-360deg);
+                opacity: 1;
+            }
+
+            /* ---------------------------------------------------------------------------------- */
+
+            .box.eighth .img {
+                transform-origin: right;
+                background: url("./image/8.jpg");
+            }
+
+            .box.eighth .spinner {
+                transform-origin: right;
+            }
+
+            .box.eighth .wrap {
+                transform: rotateY(90deg);
+                transition-delay: 0.5s;
+                transform-origin: left;
+                z-index: -2;
+                opacity: 0;
+            }
+
+            .eighth:hover .spinner {
+                transform: rotateY(-90deg);
+                opacity: 0;
+            }
+
+            .eighth:hover .img {
+                transform: rotateY(-90deg);
+                opacity: 0;
+            }
+
+            .eighth:hover .wrap {
+                transform: rotateY(0deg);
+                opacity: 1;
+            }
+
+            /* ---------------------------------------------------------------------------------- */
+
+            .box.ninth .img {
+                background: url("./image/9.jpg");
+                transform-origin: 95% 40%;
+            }
+
+            .box.ninth .spinner {
+                transform-origin: 95% 40%;
+            }
+
+            .box.ninth:after {
+                content: "";
+                display: block;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: black;
+                position: absolute;
+                top: 40%;
+                left: 95%;
+                z-index: 10;
+            }
+
+            .box.ninth .wrap {
+                z-index: -2;
+            }
+
+            .ninth:hover .spinner {
+                transform: rotate(-180deg);
+            }
+
+            .ninth:hover .img {
+                transform: rotate(-180deg);
+            }
+
+            /* ---------------------------------------------------------------------------------- */
+
+            .box.tenth .img {
+                background: url("./image/10.jpg");
+                transform-origin: left;
+            }
+
+            .box.tenth .spinner {
+                transform-origin: left;
+            }
+
+            .box.tenth .wrap {
+                z-index: -2;
+            }
+
+            .tenth:hover .spinner {
+                transform: rotateY(-180deg);
+            }
+
+            .tenth:hover .img {
+                transform: rotateY(-180deg);
+            }
+
+            /* ---------------------------------------------------------------------------------- */
+
+            .rotation {
+                width: 100%;
+                height: 300px;
+            }
+
+            .container {
+                width: 100px;
+                height: 100px;
+                /* margin-top: 200px; */
+                perspective: 400px;
+                left: 33%;
+                top: 50%;
+                perspective: 400px;
+                transform: translateX(-50%) translateY(-50%);
+                /* transform-style: preserve-3d; */
+                position: absolute;
+            }
+
+            .container .cube {
+                width: 100px;
+                height: 100px;
+                /* background: rgba(0, 0, 0, 0.5); */
+                /* transform: rotate(30deg); */
+                /* transform-origin:50% 50%; */
+                transform-style: preserve-3d;
+                perspective-origin: 50% 50%;
+                animation: rotation 4s ease-in-out 0s infinite;
+            }
+
+            .container .cube .slide {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .container .cube .slide1 {
+                background: #41c3ac;
+                transform: rotateY(-90deg) translateZ(100px);
+                /* transform-origin: left; */
+            }
+
+            .container .cube .slide2 {
+                background: #ff884d;
+                transform: rotateY(90deg) translateZ(100px);
+                /* transform-origin: right; */
+            }
+
+            .container .cube .slide3 {
+                background: #32526e;
+                transform: rotateX(90deg) translateZ(100px);
+                /* transform-origin: top; */
+            }
+
+            .container .cube .slide4 {
+                background: #65a2c5;
+                transform: rotateX(-90deg) translateZ(100px);
+                /* transform-origin: bottom; */
+            }
+
+            .container .cube .slide5 {
+                background: #ffcc5c;
+                transform: translateZ(100px);
+            }
+
+            .container .cube .slide6 {
+                background: #ff6b57;
+                transform: translateZ(-100px);
+            }
+
+            .container.container2 {
+                left: 66%;
+            }
+
+            .container2 .cube2 {
+                border-radius: 50%;
+                left: 900px;
+            }
+
+            .container2 .cube2 .slide {
+                border-radius: 50%;
+            }
+
+            @keyframes rotation {
+                0% {
+                    transform: rotateX(0deg) rotateY(0deg);
+                }
+
+                45% {
+                    transform: rotateX(360deg) rotateY(0deg);
+                }
+
+                50% {
+                    transform: rotateX(360deg) rotateY(0deg);
+                }
+
+                95% {
+                    transform: rotateX(360deg) rotateY(360deg);
+                }
+
+                100% {
+                    transform: rotateX(360deg) rotateY(360deg);
+                }
+            }
+            /* ---------------------------------------------------------------------------------- */
+        </style>
+    </head>
+
+    <body>
+        <div class="stage1">
+            <div class="container-fuild">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <div class="box third">
+                            <div class="spinner"></div>
+                            <div class="img"></div>
+                            <div class="wrap">
+                                <div class="content">
+                                    <h3>Heading here</h3>
+                                    <p>Description goes here</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <div class="box fourth">
+                            <div class="spinner"></div>
+                            <div class="img"></div>
+                            <div class="wrap">
+                                <div class="content">
+                                    <h3>Heading here</h3>
+                                    <p>Description goes here</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <div class="box fifth">
+                            <div class="spinner"></div>
+                            <div class="img"></div>
+                            <div class="wrap">
+                                <div class="content">
+                                    <h3>Heading here</h3>
+                                    <p>Description goes here</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <div class="box sixth">
+                            <div class="spinner"></div>
+                            <div class="img"></div>
+                            <div class="wrap">
+                                <div class="content">
+                                    <h3>Heading here</h3>
+                                    <p>Description goes here</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <div class="box seventh">
+                            <div class="spinner"></div>
+                            <div class="img"></div>
+                            <div class="wrap">
+                                <div class="content">
+                                    <h3>Heading here</h3>
+                                    <p>Description goes here</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <div class="box eighth">
+                            <div class="spinner"></div>
+                            <div class="img"></div>
+                            <div class="wrap">
+                                <div class="content">
+                                    <h3>Heading here</h3>
+                                    <p>Description goes here</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 rotation" >
+                        <div class="container">
+                            <div class="cube">
+                                <div class="slide slide1"></div>
+                                <div class="slide slide2"></div>
+                                <div class="slide slide3"></div>
+                                <div class="slide slide4"></div>
+                                <div class="slide slide5"></div>
+                                <div class="slide slide6"></div>
+                            </div>
+                        </div>
+
+                        <div class="container container2">
+                            <div class="cube cube2">
+                                <div class="slide slide1"></div>
+                                <div class="slide slide2"></div>
+                                <div class="slide slide3"></div>
+                                <div class="slide slide4"></div>
+                                <div class="slide slide5"></div>
+                                <div class="slide slide6"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    </body>
+</html>

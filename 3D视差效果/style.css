@@ -1,0 +1,108 @@
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(to bottom, #C6426E, #642B73);
+  perspective: 2000px;
+}
+.stage {
+  width: 600px;
+  height: 400px;
+  padding: 35px;
+  background: white;
+  border-radius: 20px;
+  position: relative;
+  top: 20%;
+  left: 50%;
+  margin-left: -300px;
+  box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.6);
+  transform-style: preserve-3d;
+  transform: rotateY(30deg);
+}
+.stage .wrap {
+  width: 100%;
+  height: 100%;
+}
+.stage .wrap h3 {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #eb285d;
+}
+.stage .wrap h2 {
+  font-size: 32px;
+  color: #3e3e42;
+  margin: 40px 0;
+}
+.stage .wrap .content .card {
+  width: 175px;
+  height: 250px;
+  border-radius: 10px;
+  float: left;
+  margin: 0;
+  margin-right: 37.5px;
+  overflow: hidden;
+  box-shadow: 5px 5px 20px -5px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  position: relative;
+}
+.stage .wrap .content .card img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transform-origin: left;
+}
+.stage .wrap .content .card h3 {
+  position: absolute;
+  width: 100%;
+  font-size: 18px;
+  margin: 0;
+  color: white;
+  bottom: 8px;
+}
+.stage .wrap .content .card:nth-child(1) .thumb {
+  background-image: url('images/1.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 10px 60px;
+}
+.stage .wrap .content .card:nth-child(1) .bg {
+  background-image: url('images/bg1.jpg');
+}
+.stage .wrap .content .card:nth-child(2) .thumb {
+  background-image: url('images/2.png');
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: 20px 60px;
+}
+.stage .wrap .content .card:nth-child(2) .bg {
+  background-image: url('images/bg2.jpg');
+}
+.stage .wrap .content .card:nth-child(3) {
+  margin-right: 0;
+}
+.stage .wrap .content .card:nth-child(3) .thumb {
+  background-image: url('images/3.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 10px 0px;
+}
+.stage .wrap .content .card:nth-child(3) .bg {
+  background-image: url('images/bg3.jpg');
+}
+.stage .wrap .content .card .bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-size: 150% 150%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.stage .wrap .content .card .thumb {
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=./style.css.map */
