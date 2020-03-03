@@ -88,17 +88,23 @@
 
 ## 7.VUE.js
 
+- ### [简约音乐](https://hehe1794.github.io/JYmusic/)
 
+  使用技术：
 
-## 8.react.js
+  html+css+javascript
 
+  框架：bootstrap
 
+- ### [简约视频](https://hehe1794.github.io/JYmovie/)
 
-## 9.小程序
+  使用技术：
 
+  html+css+javascript
 
+  框架：bootstrap
 
-## 10.node.js
+## 8.小程序
 
 
 
